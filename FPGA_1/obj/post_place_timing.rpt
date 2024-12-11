@@ -1,0 +1,83 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Thu Dec  5 00:44:24 2024
+| Host         : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_timing -file obj/post_place_timing.rpt
+| Design       : top_level
+| Device       : 7s50-csga324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Fully Placed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.574ns  (required time - arrival time)
+  Source:                 com_m/number_inputs_reg[19]/C
+                            (rising edge-triggered cell FDRE clocked by clk_camera_cw_fast  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Destination:            com_m/div_y/divisor_reg[1]/CE
+                            (rising edge-triggered cell FDRE clocked by clk_camera_cw_fast  {rise@0.000ns fall@2.500ns period=5.000ns})
+  Path Group:             clk_camera_cw_fast
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            5.000ns  (clk_camera_cw_fast rise@5.000ns - clk_camera_cw_fast rise@0.000ns)
+  Data Path Delay:        4.082ns  (logic 1.058ns (25.919%)  route 3.024ns (74.081%))
+  Logic Levels:           3  (LUT4=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.108ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.137ns = ( 2.863 - 5.000 ) 
+    Source Clock Delay      (SCD):    -2.464ns
+    Clock Pessimism Removal (CPR):    -0.434ns
+  Clock Uncertainty:      0.067ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.113ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_camera_cw_fast rise edge)
+                                                      0.000     0.000 r  
+    N15                                               0.000     0.000 r  clk_100mhz (IN)
+                         net (fo=0)                   0.000     0.000    wizard_migcam/clk_100mhz
+    N15                  IBUF (Prop_ibuf_I_O)         1.440     1.440 r  wizard_migcam/clkin1_ibufg/O
+                         net (fo=1, estimated)        1.253     2.693    wizard_migcam/clk_in1_cw_fast
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT2)
+                                                     -8.525    -5.832 r  wizard_migcam/plle2_adv_inst/CLKOUT2
+                         net (fo=1, estimated)        1.660    -4.172    wizard_migcam/clk_camera_cw_fast
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.096    -4.076 r  wizard_migcam/clkout3_buf/O
+                         net (fo=642, estimated)      1.612    -2.464    com_m/clk_camera
+    SLICE_X7Y82          FDRE                                         r  com_m/number_inputs_reg[19]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y82          FDRE (Prop_fdre_C_Q)         0.456    -2.008 r  com_m/number_inputs_reg[19]/Q
+                         net (fo=4, estimated)        0.662    -1.346    com_m/div_y/Q[19]
+    SLICE_X7Y83          LUT4 (Prop_lut4_I0_O)        0.124    -1.222 r  com_m/div_y/FSM_sequential_state[1]_i_11/O
+                         net (fo=2, estimated)        0.678    -0.544    com_m/div_y/FSM_sequential_state[1]_i_11_n_0
+    SLICE_X7Y83          LUT5 (Prop_lut5_I4_O)        0.152    -0.392 r  com_m/div_y/count[4]_i_5/O
+                         net (fo=5, estimated)        0.829     0.437    com_m/div_y/number_inputs_reg[22]
+    SLICE_X5Y82          LUT6 (Prop_lut6_I2_O)        0.326     0.763 r  com_m/div_y/divisor[31]_i_1__0/O
+                         net (fo=32, estimated)       0.855     1.618    com_m/div_y/divisor[31]_i_1__0_n_0
+    SLICE_X8Y78          FDRE                                         r  com_m/div_y/divisor_reg[1]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_camera_cw_fast rise edge)
+                                                      5.000     5.000 r  
+    N15                                               0.000     5.000 r  clk_100mhz (IN)
+                         net (fo=0)                   0.000     5.000    wizard_migcam/clk_100mhz
+    N15                  IBUF (Prop_ibuf_I_O)         1.370     6.370 r  wizard_migcam/clkin1_ibufg/O
+                         net (fo=1, estimated)        1.190     7.561    wizard_migcam/clk_in1_cw_fast
+    PLLE2_ADV_X0Y0       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT2)
+                                                     -7.790    -0.229 r  wizard_migcam/plle2_adv_inst/CLKOUT2
+                         net (fo=1, estimated)        1.577     1.348    wizard_migcam/clk_camera_cw_fast
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091     1.439 r  wizard_migcam/clkout3_buf/O
+                         net (fo=642, estimated)      1.424     2.863    com_m/div_y/clk_camera
+    SLICE_X8Y78          FDRE                                         r  com_m/div_y/divisor_reg[1]/C
+                         clock pessimism             -0.434     2.428    
+                         clock uncertainty           -0.067     2.362    
+    SLICE_X8Y78          FDRE (Setup_fdre_C_CE)      -0.169     2.193    com_m/div_y/divisor_reg[1]
+  -------------------------------------------------------------------
+                         required time                          2.193    
+                         arrival time                          -1.618    
+  -------------------------------------------------------------------
+                         slack                                  0.574    
+
+
+
+

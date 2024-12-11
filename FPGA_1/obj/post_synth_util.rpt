@@ -1,0 +1,47 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
+| Date         : Thu Dec  5 00:44:17 2024
+| Host         : eecs-digital-26 running 64-bit Ubuntu 24.04.1 LTS
+| Command      : report_utilization -file obj/post_synth_util.rpt -hierarchical -hierarchical_depth 4
+| Design       : top_level
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------+-----------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|     Instance    |               Module              | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------+-----------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| top_level       |                             (top) |        606 |        606 |       0 |    0 | 635 |      0 |      1 |          2 |
+|   (top_level)   |                             (top) |          0 |          0 |       0 |    0 |  42 |      0 |      0 |          0 |
+|   com_m         |                    center_of_mass |        333 |        333 |       0 |    0 | 325 |      0 |      0 |          0 |
+|     (com_m)     |                    center_of_mass |         69 |         69 |       0 |    0 | 117 |      0 |      0 |          0 |
+|     div_x       |                           divider |        126 |        126 |       0 |    0 | 104 |      0 |      0 |          0 |
+|     div_y       |                         divider_0 |        138 |        138 |       0 |    0 | 104 |      0 |      0 |          0 |
+|   crw           |                  camera_registers |        108 |        108 |       0 |    0 | 104 |      0 |      0 |          0 |
+|     (crw)       |                  camera_registers |          8 |          8 |       0 |    0 |  42 |      0 |      0 |          0 |
+|     aia         |                    addr_increment |          8 |          8 |       0 |    0 |   9 |      0 |      0 |          0 |
+|     sccb_c      |                        i2c_master |         92 |         92 |       0 |    0 |  53 |      0 |      0 |          0 |
+|   mssc          |                         lab05_ssc |         24 |         24 |       0 |    0 |  25 |      0 |      0 |          0 |
+|   mt            |                         threshold |          0 |          0 |       0 |    0 |   1 |      0 |      0 |          0 |
+|   pr            |                 pixel_reconstruct |         24 |         24 |       0 |    0 |  42 |      0 |      0 |          0 |
+|   registers     | xilinx_single_port_ram_read_first |          7 |          7 |       0 |    0 |   0 |      0 |      1 |          0 |
+|   rgbtoycrcb_m  |                      rgb_to_ycrcb |         31 |         31 |       0 |    0 |  21 |      0 |      0 |          2 |
+|   uart_out      |                      uart_wrapper |         38 |         38 |       0 |    0 |  48 |      0 |      0 |          0 |
+|     (uart_out)  |                      uart_wrapper |          7 |          7 |       0 |    0 |  23 |      0 |      0 |          0 |
+|     uart_tx     |                     uart_transmit |         31 |         31 |       0 |    0 |  25 |      0 |      0 |          0 |
+|   uart_rx       |                      uart_receive |         41 |         41 |       0 |    0 |  27 |      0 |      0 |          0 |
+|   wizard_migcam |                   cw_fast_clk_wiz |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
++-----------------+-----------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

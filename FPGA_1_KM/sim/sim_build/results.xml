@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1731799343" />
+    <testcase name="test_17bit_transmission" classname="test_uart_wrapper" file="/Users/christophermejia/school/6.205/FinalProj/FPGA_1/sim/test_uart_wrapper.py" lineno="20" time="8.299422979354858" sim_time_ns="3124910.001" ratio_time="376521.35681882186" />
+  </testsuite>
+</testsuites>
